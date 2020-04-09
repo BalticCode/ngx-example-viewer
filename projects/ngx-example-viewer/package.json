@@ -1,13 +1,14 @@
 {
   "name": "@balticcode/ngx-example-viewer",
   "version": "1.0.0",
-  "description": "An Angular wrapper for local storage access.",
+  "description": "An Angular library for providing an example viewer like the one from Angular Material.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BalticCode/ngx-example-viewer.git"
   },
   "keywords": [
     "angular",
+    "library",
     "example",
     "viewer",
     "docs"
@@ -23,6 +24,7 @@
     "@angular/common": ">=9.0.0",
     "@angular/core": ">=9.0.0",
     "@angular/material": ">=9.0.0",
+    "highlight.js": "^9.18.1",
     "tslib": "^1.10.0"
   }
 }

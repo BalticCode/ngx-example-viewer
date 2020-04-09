@@ -3,6 +3,8 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
+@import './ngx-example-viewer-theme';
+@import '~highlight.js/styles/darcula.css';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -25,6 +27,7 @@ $ngx-example-viewer-demo-theme: mat-light-theme($ngx-example-viewer-demo-primary
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($ngx-example-viewer-demo-theme);
+@include ngxev-example-viewer-theme($ngx-example-viewer-demo-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

@@ -70,7 +70,7 @@ export default function(options: SchemaOptions): Rule {
 
     return chain([
       addImportsToModuleFile(options, ['ExampleViewerModule']),
-      addImportsToModuleDeclaration(options, ['ExampleViewerModule.forRoot()'])
+      addImportsToModuleDeclaration(options, ['ExampleViewerModule'])
     ])(host, context);
   };
 }
