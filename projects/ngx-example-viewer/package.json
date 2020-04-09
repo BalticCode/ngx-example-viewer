@@ -1,0 +1,28 @@
+{
+  "name": "@balticcode/ngx-example-viewer",
+  "version": "1.0.0",
+  "description": "An Angular wrapper for local storage access.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalticCode/ngx-example-viewer.git"
+  },
+  "keywords": [
+    "angular",
+    "example",
+    "viewer",
+    "docs"
+  ],
+  "author": "BalticCode (b4lt1c.c0d3@gmail.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/BalticCode/ngx-example-viewer/issues"
+  },
+  "homepage": "https://github.com/BalticCode/ngx-example-viewer#readme",
+  "schematics": "./schematics/collection.json",
+  "peerDependencies": {
+    "@angular/common": ">=9.0.0",
+    "@angular/core": ">=9.0.0",
+    "@angular/material": ">=9.0.0",
+    "tslib": "^1.10.0"
+  }
+}
