@@ -16,26 +16,22 @@ export class AppComponent {
       {
         file: 'demo-example.component.html',
         language: 'html',
-        content: './assets/demo-example.component.html',
-        filecontent: '!!raw-loader!../demo-example/demo-example.component.html'
+        filePath: './assets/demo-example.component.html'
       },
       {
         file: 'demo-example.component.scss',
         language: 'scss',
-        content: './assets/demo-example.component.scss',
-        filecontent: '!!raw-loader!../demo-example/demo-example.component.scss'
+        filePath: './assets/demo-example.component.scss'
       },
       {
         file: 'demo-example.component.ts',
         language: 'ts',
-        content: './assets/demo-example.component.ts',
-        filecontent: '!!raw-loader!../demo-example/demo-example.component.ts'
+        filePath: './assets/demo-example.component.ts'
       },
       {
         file: 'app.module.ts',
         language: 'ts',
-        content: './assets/app.module.ts',
-        filecontent: '!!raw-loader!../demo-example/demo-example.component.ts'
+        filePath: './assets/app.module.ts'
       },
     ],
     component: DemoExampleComponent
@@ -47,20 +43,17 @@ export class AppComponent {
       {
         file: 'mat-button-demo.component.html',
         language: 'html',
-        content: './assets/mat-button-demo.component.html',
-        filecontent: '!!raw-loader!../demo-example/mat-button-demo.component.html'
+        filePath: './assets/mat-button-demo.component.html'
       },
       {
         file: 'mat-button-demo.component.scss',
         language: 'scss',
-        content: './assets/mat-button-demo.component.scss',
-        filecontent: '!!raw-loader!../demo-example/mat-button-demo.component.scss'
+        filePath: './assets/mat-button-demo.component.scss'
       },
       {
         file: 'mat-button-demo.component.ts',
         language: 'ts',
-        content: './assets/mat-button-demo.component.ts',
-        filecontent: '!!raw-loader!../demo-example/mat-button-demo.component.ts'
+        filePath: './assets/mat-button-demo.component.ts'
       },
     ],
     component: MatButtonDemoComponent

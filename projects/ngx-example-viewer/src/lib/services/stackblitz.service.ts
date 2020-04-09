@@ -67,20 +67,20 @@ export class StackblitzService {
     this.appendFormInput(form, 'description', example.title);
 
     // add AppModule
-    const appModuleContent = example.files.find((f: ExampleFile) => f.file === 'app.module.ts')?.filecontent ?? '';
+    // const appModuleContent = example.files.find((f: ExampleFile) => f.file === 'app.module.ts')?.filecontent ?? '';
 
     // construct options
     const options: any = {};
 
-    if (appModuleContent.indexOf('@angular/material') !== -1) {
-      options.includeMaterial = true;
-      options.useAnimation = true;
-    }
+    // if (appModuleContent.indexOf('@angular/material') !== -1) {
+    //   options.includeMaterial = true;
+    //   options.useAnimation = true;
+    // }
 
-    if (!options.useAnimation
-      && example.files.map((f: ExampleFile) => f.filecontent).some(content => content.indexOf('@angular/animations') !== -1)) {
-      options.useAnimation = true;
-    }
+    // if (!options.useAnimation
+    //   && example.files.map((f: ExampleFile) => f.filecontent).some(content => content.indexOf('@angular/animations') !== -1)) {
+    //   options.useAnimation = true;
+    // }
 
     const deps = {
       ...dependencies.core
@@ -111,15 +111,15 @@ export class StackblitzService {
     //     );
     //   });
 
-    example.files.forEach(data => {
-      this.addFileToForm(
-        form,
-        // this._replaceExamplePlaceholderNames(data.file, data.filecontent, options),
-        data.filecontent,
-        data.file,
-        data.file.indexOf('assets') !== 0,
-      );
-    });
+    // example.files.forEach(data => {
+    //   this.addFileToForm(
+    //     form,
+    //     // this._replaceExamplePlaceholderNames(data.file, data.filecontent, options),
+    //     data.filecontent,
+    //     data.file,
+    //     data.file.indexOf('assets') !== 0,
+    //   );
+    // });
 
     return form;
   }

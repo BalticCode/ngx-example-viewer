@@ -1,6 +1,7 @@
 export interface ExampleFile {
     file: string;
     language: string;
-    filecontent: string;
-    content: string;
+    filePath: string;
+    // TODO v1.1.0
+    // filecontent: string;
 }
