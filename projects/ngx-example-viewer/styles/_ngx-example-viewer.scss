@@ -7,28 +7,16 @@
 
   ngxev-example-viewer {
     .example-viewer-wrapper {
-      border: 1px solid rgba(mat-color($foreground, secondary-text), .03);
-      box-shadow: 0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12);
-      margin: 4px;
+      border: 1px solid rgba(mat-color($foreground, secondary-text), .03) !important;
     }
 
     .example-viewer-title {
-      color: mat-color($foreground, secondary-text);
-      background: #f2f3f2;
+      background-color: mat-color($primary) !important;
+      color: mat-color($primary, '500-contrast') !important; 
     }
 
     .example-source-copy {
-      color: mat-color($accent);
-      right: 8px;
-
-      [dir='rtl'] & {
-        right: auto;
-        left: 8px;
-      }
-    }
-
-    .example-source {
-      overflow-x: scroll;
+      color: mat-color($accent) !important;
     }
   }
 }
