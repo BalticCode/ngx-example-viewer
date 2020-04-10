@@ -1,12 +1,16 @@
 <header>
   <mat-toolbar color="primary" role="banner">
-    <span>Welcome</span>
+    <span>@balticcode/ngx-example-viewer</span>
   </mat-toolbar>
 </header>
 
 <main>
 
-  <ngxev-example-viewer [example]="example"></ngxev-example-viewer>
+  <ngxev-example-viewer id="getting-started" [example]="gettingStarted"></ngxev-example-viewer>
+
+  <ngxev-example-viewer id="material-theme" [example]="materialTheme" [showSource]="true" [sourceToggleable]="false"></ngxev-example-viewer>
+
+  <ngxev-example-viewer id="code-theme" [example]="codeTheme" [showSource]="true" [sourceToggleable]="false"></ngxev-example-viewer>
 
   <ngxev-example-viewer [example]="matButtons"></ngxev-example-viewer>
 
