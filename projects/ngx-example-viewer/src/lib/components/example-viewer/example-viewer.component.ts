@@ -16,6 +16,9 @@ export class ExampleViewerComponent {
   public example: Example;
 
   @Input()
+  public sourceToggleable = true;
+
+  @Input()
   public showSource = false;
 
   constructor(
