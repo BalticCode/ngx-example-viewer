@@ -28,4 +28,4 @@ import { HttpClientModule } from '@angular/common/http';
     ExampleViewerComponent
   ]
 })
-export class NgxExampleViewerModule { }
+export class ExampleViewerModule { }
