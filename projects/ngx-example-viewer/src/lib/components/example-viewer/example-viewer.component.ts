@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import { Example } from '../../interfaces/example';
 import { SourceCopierService } from '../../services/source-copier.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'ngxev-example-viewer',
@@ -33,7 +34,8 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly componentFactoryResolver: ComponentFactoryResolver,
-    private readonly sourceCopier: SourceCopierService
+    private readonly sourceCopier: SourceCopierService,
+    private readonly snackbar: MatSnackBar
   ) { }
 
   public ngOnInit(): void {
@@ -54,6 +56,10 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
   }
 
   public copySource(content: HTMLPreElement): void {
-    this.sourceCopier.copyText(content.innerText);
+    if (this.sourceCopier.copyText(content.innerText)) {
+      this.snackbar.open('Code copied', '', { duration: 2500 });
+    } else {
+      this.snackbar.open('Copy failed. Please try again!', '', { duration: 2500 });
+    }
   }
 }
