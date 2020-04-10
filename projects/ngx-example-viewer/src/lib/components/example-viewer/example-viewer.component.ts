@@ -15,6 +15,7 @@ export class ExampleViewerComponent {
   @Input()
   public example: Example;
 
+  @Input()
   public showSource = false;
 
   constructor(
