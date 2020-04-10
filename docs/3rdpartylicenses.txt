@@ -85,9 +85,6 @@ THE SOFTWARE.
 @angular/platform-browser
 MIT
 
-@angular/router
-MIT
-
 @balticcode/ngx-example-viewer
 Apache-2.0
 

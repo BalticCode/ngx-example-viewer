@@ -8,7 +8,6 @@ import { MatButtonDemoComponent } from './docs/mat-button-demo/mat-button-demo.c
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,9 +17,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([], {
-      anchorScrolling: 'enabled'
-    }),
 
     ExampleViewerModule,
     MatButtonModule,
