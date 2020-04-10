@@ -1,2 +1,4 @@
+const version = require('../../package').version;
+
 export const LIB_NAME = '@balticcode/ngx-example-viewer';
-export const LIB_VERSION = '^1.0.0';
+export const LIB_VERSION = `^${version}`;

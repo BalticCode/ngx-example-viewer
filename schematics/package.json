@@ -1,6 +1,6 @@
 {
   "name": "@balticcode/ngx-example-viewer-schematics",
-  "version": "1.0.0",
+  "version": "1.0.0-0",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*.spec.js"
