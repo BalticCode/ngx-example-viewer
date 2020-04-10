@@ -14,22 +14,22 @@ export class AppComponent {
     title: 'Simple',
     files: [
       {
-        file: 'demo-example.component.html',
+        title: 'demo-example.component.html',
         language: 'html',
         filePath: './assets/demo-example.component.html'
       },
       {
-        file: 'demo-example.component.scss',
+        title: 'demo-example.component.scss',
         language: 'scss',
         filePath: './assets/demo-example.component.scss'
       },
       {
-        file: 'demo-example.component.ts',
+        title: 'demo-example.component.ts',
         language: 'ts',
         filePath: './assets/demo-example.component.ts'
       },
       {
-        file: 'app.module.ts',
+        title: 'app.module.ts',
         language: 'ts',
         filePath: './assets/app.module.ts'
       },
@@ -41,17 +41,17 @@ export class AppComponent {
     title: 'Button varieties (from Angular Material docs)',
     files: [
       {
-        file: 'mat-button-demo.component.html',
+        title: 'mat-button-demo.component.html',
         language: 'html',
         filePath: './assets/mat-button-demo.component.html'
       },
       {
-        file: 'mat-button-demo.component.scss',
+        title: 'mat-button-demo.component.scss',
         language: 'scss',
         filePath: './assets/mat-button-demo.component.scss'
       },
       {
-        file: 'mat-button-demo.component.ts',
+        title: 'mat-button-demo.component.ts',
         language: 'ts',
         filePath: './assets/mat-button-demo.component.ts'
       },
