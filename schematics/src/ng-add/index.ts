@@ -3,14 +3,17 @@ import {
   Tree,
   Rule,
   chain,
-  SchematicsException} from '@angular-devkit/schematics';
+  SchematicsException
+} from '@angular-devkit/schematics';
+import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 import { createSourceFile, SourceFile, ScriptTarget } from 'typescript';
-import { LIB_NAME } from '../utils/schematics.consts';
+import { LIB_NAME, LIB_VERSION } from '../utils/schematics.consts';
 import { addImportToModule, insertImport } from '../utils/ast-utils';
 import { InsertChange } from '../utils/change';
 import { findRootModule } from '../utils/find-module';
 import { getProject } from '../utils/projects';
 import { SchemaOptions } from './schema';
+import { addPackageToPackageJson } from '../utils/package';
 
 export function getModuleFile(host: Tree, options: SchemaOptions): SourceFile {
   const modulePath = options.module;
@@ -65,12 +68,23 @@ export default function(options: SchemaOptions): Rule {
 
     const sourceRoot = (project && project.sourceRoot) || 'src';
 
-
     options.module = findRootModule(host, options.module, sourceRoot) as string;
 
     return chain([
+      addToPackageJson(),
       addImportsToModuleFile(options, ['ExampleViewerModule']),
       addImportsToModuleDeclaration(options, ['ExampleViewerModule'])
     ])(host, context);
+  };
+}
+
+function addToPackageJson() {
+  return (host: Tree, context: SchematicContext) => {
+    addPackageToPackageJson(host, 'dependencies', LIB_NAME, LIB_VERSION);
+    addPackageToPackageJson(host, 'dependencies', 'highlight.js', '^9.18.1');
+
+    context.addTask(new NodePackageInstallTask());
+
+    return host;
   };
 }
