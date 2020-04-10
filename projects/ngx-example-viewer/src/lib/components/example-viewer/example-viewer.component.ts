@@ -1,17 +1,8 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ComponentFactoryResolver,
-  ComponentRef,
-  Input,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-  ViewContainerRef
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 import { Example } from '../../interfaces/example';
 import { SourceCopierService } from '../../services/source-copier.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'ngxev-example-viewer',
@@ -19,37 +10,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./example-viewer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExampleViewerComponent implements OnInit, OnDestroy {
+export class ExampleViewerComponent {
 
   @Input()
   public example: Example;
 
-  @ViewChild('demo', { read: ViewContainerRef, static: true })
-  public demoRef: ViewContainerRef;
-
-  private demoComponentRef: ComponentRef<any>;
-
-  /** Whether the source for the example is being displayed. */
   public showSource = false;
 
   constructor(
-    private readonly componentFactoryResolver: ComponentFactoryResolver,
     private readonly sourceCopier: SourceCopierService,
     private readonly snackbar: MatSnackBar
   ) { }
-
-  public ngOnInit(): void {
-    if (this.example?.component) {
-      const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.example.component);
-      this.demoComponentRef = this.demoRef.createComponent(componentFactory);
-    }
-  }
-
-  public ngOnDestroy(): void {
-    if (this.demoComponentRef) {
-      this.demoComponentRef.destroy();
-    }
-  }
 
   public toggleSourceView(): void {
     this.showSource = !this.showSource;
