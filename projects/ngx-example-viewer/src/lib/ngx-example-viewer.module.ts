@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -22,6 +23,7 @@ import { HighlightLoaderPipe } from './pipes/highlight-loader.pipe';
     HttpClientModule,
 
     MatButtonModule,
+    MatDividerModule,
     MatIconModule,
     MatSnackBarModule,
     MatTabsModule,
