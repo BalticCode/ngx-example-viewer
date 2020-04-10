@@ -12,6 +12,7 @@
     "build:lib": "ng build ngx-example-viewer --prod",
     "copy": "npm run schematics:copy && copyfiles ./LICENSE ./README.md ./dist/libs/ngx-example-viewer",
     "schematics:copy": "copyfiles -u 2 ./schematics/src/**/*.js ./schematics/src/**/*.json ./dist/libs/ngx-example-viewer/schematics",
+    "docs:data:copy": "copyfiles -u 4 ./projects/ngx-example-viewer-demo/src/app/docs/**/*.html ./projects/ngx-example-viewer-demo/src/app/docs/**/*.scss ./projects/ngx-example-viewer-demo/src/app/docs/**/*.ts ./projects/ngx-example-viewer-demo/src/assets",
     "build:docs": "ng build --prod --output-path docs --base-href ngx-example-viewer",
     "schematics:watch": "cd ./schematics/ && npm link && cd .. && npm link schematics && npm run build --prefix ./schematics -- --watch"
   },
