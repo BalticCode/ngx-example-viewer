@@ -2,7 +2,7 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
-@import '~@balticcode/ngx-example-viewer';
+@import '~@balticcode/ngx-example-viewer/material/theming';
 
 @include mat-core();
 
@@ -15,4 +15,4 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
 // Include the librarys mixin with a theme
-@include ngxev-example-viewer($theme);
+@include viewer-theme($theme);

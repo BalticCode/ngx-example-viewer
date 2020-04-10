@@ -3,7 +3,7 @@
   "dest": "../../dist/libs/ngx-example-viewer",
   "deleteDestPath": false,
   "assets": [
-    "styles/_ngx-example-viewer.scss"
+    "material/_theming.scss"
   ],
   "lib": {
     "entryFile": "src/public-api.ts"
