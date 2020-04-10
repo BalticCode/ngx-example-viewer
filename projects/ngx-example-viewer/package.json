@@ -1,6 +1,6 @@
 {
   "name": "@balticcode/ngx-example-viewer",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "An Angular library for providing an example viewer like the one from Angular Material.",
   "repository": {
     "type": "git",

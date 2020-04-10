@@ -1,6 +1,6 @@
 {
-  "name": "@balticcode/ngx-example-viewer",
-  "version": "1.0.0-0",
+  "name": "ngx-example-viewer",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -28,6 +28,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@balticcode/ngx-example-viewer": "^1.0.0-0",
     "highlight.js": "^9.18.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
