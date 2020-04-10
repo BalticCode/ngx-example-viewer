@@ -1,0 +1,61 @@
+:host {
+    display: block;
+    padding: 15px;
+}
+
+.example-viewer-wrapper {
+    box-shadow: 0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12);
+    margin: 4px;
+
+    h3 {
+        margin-top: 10px;
+    }
+}
+
+.example-viewer-title {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px 20px;
+    top: 0;
+    z-index: 1;
+
+    background: #f2f3f2;
+}
+
+.example-viewer-title-spacer {
+    flex: 1 1 auto;
+}
+
+.example-source-copy {
+    position: absolute;
+    top: 8px;
+    display: none;
+
+    color: gray;
+    right: 8px;
+
+    [dir='rtl'] & {
+        right: auto;
+        left: 8px;
+    }
+}
+
+.example-source-wrapper:hover {
+    .example-source-copy {
+        display: inline-block;
+    }
+}
+
+.example-source {
+    min-height: 150px;
+    margin: 0;
+    overflow-x: scroll;
+}
+
+.example-viewer-body {
+    flex: 1 1 auto;
+    padding: 15px;
+}
+  

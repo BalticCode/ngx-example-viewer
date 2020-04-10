@@ -1,5 +1,5 @@
 {
-  "name": "@balticcode/ngx-example-viewer",
+  "name": "ngx-example-viewer",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,6 +12,7 @@
     "build:lib": "ng build ngx-example-viewer --prod",
     "copy": "npm run schematics:copy && copyfiles ./LICENSE ./README.md ./dist/libs/ngx-example-viewer",
     "schematics:copy": "copyfiles -u 2 ./schematics/src/**/*.js ./schematics/src/**/*.json ./dist/libs/ngx-example-viewer/schematics",
+    "docs:data:copy": "copyfiles -u 4 ./projects/ngx-example-viewer-demo/src/app/docs/**/*.html ./projects/ngx-example-viewer-demo/src/app/docs/**/*.scss ./projects/ngx-example-viewer-demo/src/app/docs/**/*.ts ./projects/ngx-example-viewer-demo/src/assets",
     "build:docs": "ng build --prod --output-path docs --base-href ngx-example-viewer",
     "schematics:watch": "cd ./schematics/ && npm link && cd .. && npm link schematics && npm run build --prefix ./schematics -- --watch"
   },
@@ -27,6 +28,8 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@balticcode/ngx-example-viewer": "^1.0.0-0",
+    "highlight.js": "^9.18.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -39,6 +42,7 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
+    "@types/highlightjs": "^9.12.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

@@ -1,0 +1,22 @@
+@mixin viewer-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  ngxev-example-viewer {
+    .example-viewer-wrapper {
+      border: 1px solid rgba(mat-color($foreground, secondary-text), .03) !important;
+    }
+
+    .example-viewer-title {
+      background-color: mat-color($primary) !important;
+      color: mat-color($primary, '500-contrast') !important; 
+    }
+
+    .example-source-copy {
+      color: mat-color($accent) !important;
+    }
+  }
+}
